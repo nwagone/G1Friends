@@ -1,5 +1,4 @@
 <h1>Welcome To Your Calendar</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 
 
 
@@ -8,9 +7,13 @@
 
   <form name="MY Form"action="Login">
     <h2>Login</h2>
-    <br>Username: <input type="text"name="text1">
-    <br>Password: <input type="password" name="text2">
-    <br>
-    <input type="submit"name="button1"value="login">
+    <% if current_user %>
+    Logged in as <%= current_user.email %>
+    <p><%=  link_to "Log Out", logout_path %></p>
+    <% else %>
+    <p><%=link_to "Sign Up", signup_path %> or 
+    <%= link_to "Log In", login_path %> </p>
+    <% end %>
+<p id="notice"><%= notice %></p>
   </form>
 
