@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_31_172846) do
+ActiveRecord::Schema.define(version: 2019_11_01_154000) do
+
+  create_table "events_calendars", force: :cascade do |t|
+    t.string "title"
+    t.time "time_start"
+    t.time "time_end"
+    t.date "date"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
