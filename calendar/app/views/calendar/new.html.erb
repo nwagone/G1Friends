@@ -1,0 +1,23 @@
+<h1>Create New Event</h1>
+<%= form_for :calendar, url: calendar_index_url do |f| %>
+
+  <p>
+    <%= f.label :Event %><br>
+    <%= f.text_field :Event %>
+  </p>
+
+  <%= select_year(Date.today, {:prompt => "Year",:start_year => DateTime.now.year,:end_year => DateTime.now.year - 7, prefix: 'select'},{:field_name => 'year', :id => 'start-year'}) %>
+  <%= select_month(Date.today, {:prompt => "month",use_short_month: true, prefix: 'select'},{:field_name => 'month', :id => 'start-month'}) %>
+
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', calendar_index_url %>

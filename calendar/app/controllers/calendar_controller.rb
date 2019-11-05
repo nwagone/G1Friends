@@ -10,12 +10,17 @@ class CalendarController < ApplicationController
         @event = EventsCalendar.new
     end
     def create
-        @event = EventsCalendar.new(article_params)
+        @event = EventsCalendar.new(calendar_params)
         
         if @event.save
-            redirect_to @EventsCalendar
+            redirect_to calendar_index_url
         else
             render 'new'
         end
     end
 end
+
+private
+    def calendar_params
+        params.require(:calendar).permit(:title, :text)
+    end
