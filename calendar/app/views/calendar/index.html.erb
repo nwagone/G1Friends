@@ -9,6 +9,7 @@
     <th>Start Time</th>
     <th>End Time</th>
     <th>Description</th>
+    <th>Delete</th>
   </tr>
 
   <% @event.each do |event| %>
@@ -18,6 +19,10 @@
       <td><%= event.time_start %></td>
       <td><%= event.time_end %></td>
       <td><%= event.description %></td>
+      <td><%= link_to 'Destroy',
+              calendar_path(event),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

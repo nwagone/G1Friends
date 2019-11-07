@@ -19,6 +19,12 @@ class CalendarController < ApplicationController
             render 'new'
         end
     end
+    def destroy
+        @event = EventsCalendar.find(params[:id])
+        @event.destroy
+        
+        redirect_to calendar_index_path
+    end
 end
 
 private
