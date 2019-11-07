@@ -19,11 +19,33 @@ class CalendarController < ApplicationController
             render 'new'
         end
     end
+    
+      def edit
+          @event = EventsCalendar.find(params[:id])
+      end
+    
+    def update
+    @event = EventsCalendar.find(params[:id])
+    if @event.update(calendar_params)
+    redirect_to @event
+    
+    else
+        render 'edit'
+    end
+    end
+    
+    def destroy
+    @event = EventsCalendar.find(params[:id])
+    @event.destroy
+    redirect_to calendar_index_url
+    end
+
+    
 end
 
 private
     def calendar_params
-        params.require(:calendar).permit(:title, :description)
+        params.require(:calendar).permit(:title, :description, :date, :time_start, :time_end)
     end
     
    
