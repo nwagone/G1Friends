@@ -4,11 +4,12 @@ class CalendarController < ApplicationController
     end
    
     def show
-        @event = EventsCalendar.find(params[:id])
+        @event = EventsCalendar.find(params[:event_id])
     end
     def new
         @event = EventsCalendar.new
     end
+    
     def create
         @event = EventsCalendar.new(calendar_params)
         
@@ -22,5 +23,7 @@ end
 
 private
     def calendar_params
-        params.require(:calendar).permit(:title, :text)
+        params.require(:calendar).permit(:title, :description)
     end
+    
+   

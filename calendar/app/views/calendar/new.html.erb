@@ -3,21 +3,39 @@
 <%= form_for :calendar, url: calendar_index_url do |f| %>
 
   <p>
-    <%= f.label :Event %><br>
-    <%= f.text_field :Event %>
+    <%= f.label :Event_Name %><br>
+    <%= f.text_field :title %>
   </p>
+  
+  
+<p> Date<br/>
+<br/>
+ <%= f.date_select :event_date,
+order: [:month, :day, :year],
+prompt: {month:  'Month', day: 'Day', year: 'Year'},
+start_year: Time.now.year,
+end_year: 2025,
+html_options: {class: "SelectDropDown"} %>
+</p> 
 
-  <%= select_year(Date.today, {:prompt => "Year",:start_year => DateTime.now.year,:end_year => DateTime.now.year - 7, prefix: 'select'},{:field_name => 'year', :id => 'start-year'}) %>
-  <%= select_month(Date.today, {:prompt => "month",use_short_month: true, prefix: 'select'},{:field_name => 'month', :id => 'start-month'}) %>
+<p>Time <br/>
+<br/>
+<%= f.time_select :open_time, 
+order: [:hour, :minute],
+prompt: {hour: 'Time'},
+html_options: {class: "form-control"} %>
+<p/>
 
-  <p>
-    <%= f.label :Description %><br>
+
+    <%= f.label :description %><br>
     <%= f.text_area :description %>
-  </p>
 
-  <p>
+
+
+    <div>
     <%= f.submit %>
-  </p>
+    </div>
+  
 
 <% end %>
 

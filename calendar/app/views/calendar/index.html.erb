@@ -1,13 +1,15 @@
 <h1>Upcoming Events</h1>
 <%= render 'menu' %>
 
-<%= month_calendar event: @event do |date, event| %>
-<%= date %>
 
-<%= event.each do |event|%>
-<div>
-  <%= event.start_time %>
-  </div>
-  <% end %>
+<%= @event.each do |event|%>
+<tr>
+
   
+  
+  
+  
+</tr>
+
+
   <% end %>
