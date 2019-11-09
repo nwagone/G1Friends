@@ -1,11 +1,12 @@
 class CalendarController < ApplicationController
     def index
-        @event = EventsCalendar.all
+        @event = EventsCalendar.order("date","time_start")
     end
    
     def show
-        @event = EventsCalendar.find(params[:event_id])
+        @event = EventsCalendar.find(params[:id])
     end
+    
     def new
         @event = EventsCalendar.new
     end
@@ -19,37 +20,26 @@ class CalendarController < ApplicationController
             render 'new'
         end
     end
-<<<<<<< HEAD
     
-      def edit
-          @event = EventsCalendar.find(params[:id])
-      end
+    def edit
+      @event = EventsCalendar.find(params[:id])
+    end
     
     def update
-    @event = EventsCalendar.find(params[:id])
-    if @event.update(calendar_params)
-    redirect_to @event
-    
-    else
-        render 'edit'
+        @event = EventsCalendar.find(params[:id])
+        if @event.update(calendar_params)
+            redirect_to @event
+        else
+            render 'edit'
+        end
     end
-    end
     
-    def destroy
-    @event = EventsCalendar.find(params[:id])
-    @event.destroy
-    redirect_to calendar_index_url
-    end
-
-    
-=======
     def destroy
         @event = EventsCalendar.find(params[:id])
         @event.destroy
         
         redirect_to calendar_index_path
     end
->>>>>>> cc32c4a7c9e33142a18d5dc97517f9e252f016b3
 end
 
 private
