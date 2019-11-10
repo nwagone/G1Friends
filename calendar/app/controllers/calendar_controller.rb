@@ -28,7 +28,7 @@ class CalendarController < ApplicationController
     def update
         @event = EventsCalendar.find(params[:id])
         if @event.update(calendar_params)
-            redirect_to @event
+            redirect_to calendar_index_url
         else
             render 'edit'
         end
@@ -44,7 +44,7 @@ end
 
 private
     def calendar_params
-        params.require(:calendar).permit(:title, :description, :date, :time_start, :time_end)
+        params.require(:events_calendar).permit(:title, :date, :time_start, :time_end, :description)
     end
     
    
