@@ -2,6 +2,9 @@ class CalendarController < ApplicationController
     def index
         @event = EventsCalendar.order("date","time_start")
     end
+    
+    def month
+    end
    
     def show
         @event = EventsCalendar.find(params[:id])
