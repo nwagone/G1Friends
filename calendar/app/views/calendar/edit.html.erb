@@ -1,0 +1,34 @@
+<h1>Update Event</h1>
+
+<%= form_for @event, url: calendar_path(@event) do |f| %>
+
+  <p>
+    <%= f.label :Event_Name %><br>
+    <%= f.text_field :title %>
+  </p>
+  
+   <p>
+    <%= f.label :Date %><br>
+    <%= f.text_field :date %>
+  </p>
+
+ <p>
+    <%= f.label :Start_Time %><br>
+    <%= f.text_field :time_start %>
+  </p>
+  
+  <p>
+    <%= f.label :End_Time %><br>
+    <%= f.text_field :time_end %>
+  </p>
+
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+
+    <div>
+    <%= f.submit %>
+    </div>
+
+<% end %>
+
+<%= link_to 'Back', calendar_index_url %>
