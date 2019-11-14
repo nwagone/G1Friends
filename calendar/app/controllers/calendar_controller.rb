@@ -1,13 +1,13 @@
 class CalendarController < ApplicationController
     def index
-        @event = EventsCalendar.order("date","time_start")
+        @event = current_user.events_calendars.order("date","time_start")
     end
     
     def month
     end
    
     def show
-        @event = EventsCalendar.find(params[:id])
+        @event = current_user.EventsCalendar.find(params[:id])
     end
     
     def new
