@@ -7,7 +7,7 @@ class CalendarController < ApplicationController
     end
    
     def show
-        @event = current_user.EventsCalendar.find(params[:id])
+        @event = EventsCalendar.find(params[:id])
     end
     
     def new
