@@ -37,6 +37,12 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'jquery-rails'
+gem 'pickadate-rails'
+gem 'jquery-timepicker-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -68,3 +74,6 @@ group :assets do
 end
 
 gem 'jquery-ui-rails', '~> 5.0.5'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'

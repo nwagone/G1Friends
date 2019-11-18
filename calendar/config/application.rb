@@ -10,6 +10,11 @@ module Calendar
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    
+    config.time_zone = 'Berlin' # Your local time zone
+config.active_record.default_timezone = :local
+config.active_record.time_zone_aware_attributes = false
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

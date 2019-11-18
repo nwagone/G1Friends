@@ -10,7 +10,30 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
+//= require jquery-ui/datepicker
 //= require activestorage
 //= require turbolinks
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time
 //= require_tree .
+//= daterangepicker
+//= require jquery.timepicker.js
+//= require Datepair
+//= require jquery.datepair.js
+//= require bootstrap-timepicker
+//= require fullcalendar/locale-all
+//= require moment
+//= require fullcalendar
+
+
+
+
+ $( function() {
+    $( "#datepicker" ).datepicker({
+
+    });
+  } );

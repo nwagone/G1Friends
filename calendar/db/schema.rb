@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_14_165959) do
     t.string "title"
     t.time "time_start"
     t.time "time_end"
-    t.date "date"
+    t.datepicker "date"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
