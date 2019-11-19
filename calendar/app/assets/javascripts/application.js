@@ -24,16 +24,17 @@
 //= require jquery.timepicker.js
 //= require Datepair
 //= require jquery.datepair.js
-//= require bootstrap-timepicker
 //= require fullcalendar/locale-all
 //= require moment
+//= require fullcalendar/gcal
 //= require fullcalendar
 
 
 
 
  $( function() {
-    $( "#datepicker" ).datepicker({
-
-    });
+    $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+     $( ".timepicker" ).timepicker();
+     $('#calendar').fullCalendar({});
   } );
+document.addEventListener('turbolinks:load', function () { eventCalendar(); })
