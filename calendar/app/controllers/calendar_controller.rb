@@ -3,6 +3,10 @@ class CalendarController < ApplicationController
         @event = current_user.events_calendars.upcoming.order("date","time_start")
     end
     
+    def allEvents
+        @event = current_user.events_calendars.order("date","time_start")
+    end
+    
     def month
     end
    
