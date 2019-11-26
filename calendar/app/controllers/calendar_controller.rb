@@ -1,6 +1,6 @@
 class CalendarController < ApplicationController
     def index
-        @event = current_user.events_calendars.upcoming.order("date","time_start")
+        @event = current_user.events_calendars.all
     end
     
     def allEvents
@@ -8,7 +8,7 @@ class CalendarController < ApplicationController
     end
     
     def month
-        @event = current_user.events_calendars
+        @event = current_user.events_calendars.all
     end
    
     def show
