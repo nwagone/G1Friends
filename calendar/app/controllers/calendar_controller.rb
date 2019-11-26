@@ -8,6 +8,7 @@ class CalendarController < ApplicationController
     end
     
     def month
+        @event = current_user.events_calendars
     end
    
     def show
