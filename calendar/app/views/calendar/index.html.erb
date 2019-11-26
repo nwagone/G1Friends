@@ -1,37 +1,19 @@
 <h1>Upcoming Events</h1>
 <%= render 'menu' %>
 
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Start Time</th>
-    <th>End Time</th>
-    <th>Description</th>
-    <th>Show</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
-
-  <% @event.each do |event| %>
-    <tr>
-      
-      
-      <td><%= event.title %></td>
-      <td><%= event.date %></td>
-      <td><%= event.time_start  %></td>
-      <td><%= event.time_end %></td>
-      <td><%= event.description %></td>
-      <td><%= link_to 'Show', calendar_path(event) %></td>
-      <td><%= link_to 'Edit', edit_calendar_path(event) %></td>
-      <td><%= link_to 'Delete',
-              calendar_path(event),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+<%= week_calendar number_of_weeks: 1 do |date| %>
+  <%= date %>
+  
+  <% @event.each do |events| %>
+    <div>
+      <% if events.date != date %>
+      <% nil %>
+      <% else %>
+      <%= events.title %>
+      <% end %>
+    </div>
   <% end %>
-</table>
+<% end %>
 
 
 

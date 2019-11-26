@@ -4,9 +4,13 @@
 <%= month_calendar events_calendar: @event do |date, event| %>
   <%= date %>
 
-  <% event.each do |events| %>
+  <% @event.each do |events| %>
     <div>
+      <% if events.date != date %>
+      <% nil %>
+      <% else %>
       <%= events.title %>
+      <% end %>
     </div>
   <% end %>
 <% end %>
