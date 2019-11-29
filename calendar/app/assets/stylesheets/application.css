@@ -20,3 +20,19 @@
  *= bootstrap-timepicker
  *= require fullcalendar
  */
+
+.menu {
+    text-align: center;
+    
+}
+
+link{
+    
+    color: red;
+}
+
+#eventOnCalendar {
+    
+    color:red;
+}
+

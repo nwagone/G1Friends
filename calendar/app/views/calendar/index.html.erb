@@ -1,11 +1,19 @@
-<h1>Upcoming Events</h1>
+<h1>This Week</h1>
+<div class="menu">
 <%= render 'menu' %>
+</div>
+
+<br>
+<br>
 
 <%= week_calendar number_of_weeks: 1 do |date| %>
-  <%= date %>
+  <%= date.to_formatted_s(:short) %>
   
+        <br>
+              <br>
   <% @event.each do |events| %>
-    <div>
+    <div class= "eventOnCalendar">
+
       <% if events.date != date %>
       <% nil %>
       <% else %>
