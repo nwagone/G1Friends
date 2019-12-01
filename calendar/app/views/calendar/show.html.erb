@@ -9,15 +9,15 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @event.date %>
+  <%= @event.date.to_s(:long) %>
 </p>
 
 <p>
   <strong>Time:</strong><br><br>
   Start:
-  <%= @event.time_start %><br><br>
+  <%= @event.try(:time_start).strftime("%H: %M %p") unless @event.time_start.nil? %><br><br>
   End:
-  <%= @event.time_end %>
+  <%= @event.try(:time_end).strftime("%H: %M %p") unless @event.time_end.nil? %>
 </p>
  
 <p>
