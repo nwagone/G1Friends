@@ -21,9 +21,9 @@
       
       
       <td><%= event.title %></td>
-      <td><%= event.date %></td>
-      <td><%= event.time_start  %></td>
-      <td><%= event.time_end %></td>
+      <td><%= event.date.to_s(:short) %></td>
+      <td><%= event.try(:time_start).strftime("%H: %M %p") unless event.time_start.nil?%></td>
+      <td><%= event.try(:time_end).strftime("%H: %M %p") unless event.time_end.nil?%></td>
       <td><%= event.description %></td>
       <td><%= link_to 'Show', calendar_path(event) %></td>
       <td><%= link_to 'Edit', edit_calendar_path(event) %></td>

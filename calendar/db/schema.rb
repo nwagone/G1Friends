@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2019_11_14_165959) do
 
   create_table "events_calendars", force: :cascade do |t|
     t.string "title"
-    t.datetime "time_start"
+    t.time "time_start"
     t.time "time_end"
-    t.date "date"
+    t.datetime "date"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
