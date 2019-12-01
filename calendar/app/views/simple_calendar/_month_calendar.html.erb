@@ -4,7 +4,11 @@
     <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
     <%= link_to t('simple_calendar.next', default: '>>'), calendar.url_for_next_view %>
   </div>
+  
+  <br>
+    <br>
 
+<div id="calendarBody">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -30,4 +34,5 @@
       <% end %>
     </tbody>
   </table>
+</div>
 </div>

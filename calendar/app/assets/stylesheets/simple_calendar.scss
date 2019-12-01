@@ -1,13 +1,24 @@
+
+
 .simple-calendar {
+
+link {
+  text-decoration: none;
   
-  text-align: center;
-  padding-right: 3%;
-  padding-left: 1%;
+}
+
+
 
 #week-heading{
   
   font-size: 40px;
   padding-bottom: 20px;
+  
+  
+}
+
+.calendar-heading:hov {
+  text-decoration: none;
   
 }
 
@@ -17,11 +28,11 @@
      font-size: 55px; 
      font-weight: 800;
      line-height: 72px;
-     text-align: center;
+     text-decoration: none;
+ 
      text-transform: uppercase;
-     padding-bottom:9px;
-     padding-left: 50px;
-     padding-right: 2%;
+
+   
      
     
      
@@ -35,6 +46,7 @@
     
     .calendar-heading:link {
       text-decoration: none;
+      
       
     }
     
