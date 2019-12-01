@@ -1,11 +1,10 @@
 
-
 .simple-calendar {
-
-link {
-  text-decoration: none;
   
-}
+  
+
+padding-right:10%;
+padding-left: 0;
 
 
 
@@ -13,23 +12,27 @@ link {
   
   font-size: 40px;
   padding-bottom: 20px;
+  text-align: center;
+  padding-left:150px;
+  color: #3F9AB0;
   
   
 }
 
-.calendar-heading:hov {
-  text-decoration: none;
-  
-}
+
 
     .calendar-heading  {
-     color: blue; 
+     color: #3F9AB0; 
      font-family: 'Raleway',sans-serif; 
      font-size: 55px; 
      font-weight: 800;
      line-height: 72px;
      text-decoration: none;
- 
+     text-align: center;
+     padding-left:64px;
+     
+     width:100%;
+     
      text-transform: uppercase;
 
    
@@ -137,6 +140,7 @@ link {
 
   .has-events {
     
+   
     
   }
 }

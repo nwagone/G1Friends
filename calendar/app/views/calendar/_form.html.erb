@@ -4,14 +4,14 @@
    
    <%= f.label :Event_Name %>
    <br>
-   <%= f.text_field :title %>
+   <%= f.text_field :title, autocomplete: 'off' %>
   </p>
   
    <p>
     <%= f.label :Date %><br>
     <%= f.text_field :date, "id"=>"datepicker", autocomplete: 'off' %>
   </p>
-
+, 
  <p>
     <%= f.label :Start_Time %><br>
     <%= f.text_field :time_start, "class"=>"timepicker", autocomplete: 'off' %>
