@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-#menu{
+#monthMenu{
     
     text-align: center;
     
@@ -13,4 +13,23 @@
     
     color:red;
     
+}
+
+@media print {
+ 
+    
+    h1 {opacity: 0;}
+    .arrows {opacity: 0;}
+    #monthMenu {opacity: 0;}
+    #printLink {opacity: 0;}
+ @page {size: A4 landscape;max-height:100%; margin-top:1px; width:100%; margin-bottom: 1px;}
+
+    #background {
+      position: absolute;
+      top: 1px;
+      width: 100%;
+    }
+    
+    
+
 }
