@@ -1,0 +1,57 @@
+
+    @media print{
+ 
+    
+    h1 {opacity: 0;}
+    #monthMenu {opacity: 0;}
+    #printLink {opacity: 0;}
+ @page {size: A4 portrait;max-height:100%; margin-top:1px; width:100%; margin-bottom: 1px;}
+ 
+
+    #eventTable {
+      position: absolute;
+      top: 1px;
+      width: 100%;
+     
+    }
+    
+    .hideLinks {opacity: 0;}
+    
+    
+
+}
+
+#eventTable th {
+    
+    font-size: 20px;
+    text-decoration: underline;
+    text-align:left;
+    color:#3F9AB0;
+    
+}
+
+#eventHeading  {
+    
+    text-align: left;
+    font-size:15px;
+    padding-top: 10px;
+    
+}
+
+#eventTable td{
+    text-align: left;
+    
+}
+
+
+
+#description {
+     overflow: hidden;
+     text-overflow: ellipsis;
+  
+    width:150px;
+    height:60px;
+    
+    
+}
+

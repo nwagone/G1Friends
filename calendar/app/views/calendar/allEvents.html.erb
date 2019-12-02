@@ -1,19 +1,25 @@
 <h1>All Events</h1>
-<div class="menu">
-<%= render 'menu' %>
-</div>
+<div id="monthMenu">
+ <tr>
+    <th class="menuButtons"><%= link_to 'Logout', logout_path %></th>
+    <th class="menuButtons"><%= link_to 'New Event', new_calendar_path %></th>
+    <th class="menuButtons"><%= link_to 'Month', month_path %></th>
+    <th class="menuButtons"><%= link_to 'All Events', allEvents_path %></th>
+    <th class="menuButtons"><%= link_to 'This Week', calendar_index_path %></th>
+</tr>
+</div
 
 <div id="eventHeading">
-<table>
+<table id="eventTable">
   <tr>
     <th>Title</th>
     <th>Date</th>
     <th>Start Time</th>
     <th>End Time</th>
     <th>Description</th>
-    <th>Show</th>
-    <th>Edit</th>
-    <th>Delete</th>
+    <th><div class="hideLinks">Details</div></th>
+    <th><div class="hideLinks">Edit</div></th>
+    <th><div class="hideLinks">Delete</div></th>
   </tr>
  
  
@@ -22,7 +28,8 @@
   
   <br>
     <br>
-
+    
+  
   <% @event.each do |event| %>
     <tr>
      
@@ -30,14 +37,18 @@
       <td><%= event.date.to_s(:short) %></td>
       <td><%= event.try(:time_start).strftime("%H: %M %p") unless event.time_start.nil?%></td>
       <td><%= event.try(:time_end).strftime("%H: %M %p") unless event.time_end.nil?%></td>
-      <td><%= event.description %></td>
-      <td><%= link_to 'Show', calendar_path(event) %></td>
-      <td><%= link_to 'Edit', edit_calendar_path(event) %></td>
-      <td><%= link_to 'Delete',
+      <td><div id="description"><%= event.description %></div></td> 
+      <td><div class="hideLinks"><%= link_to 'Details', calendar_path(event) %></div></td>
+      <td><div class="hideLinks"><%= link_to 'Edit', edit_calendar_path(event) %></div></td>
+      <td><div class="hideLinks"><%= link_to 'Delete',
               calendar_path(event),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' } %></div></td>
     </tr>
     
   <% end %>
+  
+  <div id= "printLink">
+<%= link_to 'Print my Events Page', 'your_link_here', :onclick => 'window.print();return false;'%>
+</div>
 </table>
