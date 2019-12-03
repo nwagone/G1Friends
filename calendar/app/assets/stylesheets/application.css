@@ -16,6 +16,7 @@
  *= pickadate/default
  *= pickadate/default.date
  *= pickadate/default.time
+ *= require jquery.minicolors
  *= require jquery.timepicker.css
  *= bootstrap-timepicker
  *= require fullcalendar
@@ -26,5 +27,36 @@
     
 }
 
+.formField {
+    
+    width:200px;
+    text-align:center;
+    
+}
+
+#newEventTable td {
+    
+    font-size:20px;
+    width:100%;
+    text-align:center;
+    padding-left:0px;
+   
+    
+    
+}
+
+#newEventTable tr 
+{
+    height:75px;
+    width: 200px;
+    font-size:50px;
+    text-align:center;
+    
+}
 
 
+#newEventTable {
+    
+    text-align:center;
+    
+}

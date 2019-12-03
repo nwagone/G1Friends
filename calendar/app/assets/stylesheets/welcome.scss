@@ -17,17 +17,12 @@ h2{
     font-size: 100%;
 }
 
-p{
-    font-family: Arial;
-    font-size: 150%;
-    padding: 10px;
-    text-align: center;
-}
+
 
 form{
     font-family: Arial;
     font-size: 200%;
-    text-align: left;
+    text-align: center;
     margin-left: 30%;
     margin-right: 30%;
     padding-top: 50px;
@@ -40,16 +35,15 @@ form{
 
 input[type=button], input[type=submit] {
     font-family: Arial;
-    font-size: 50%;
+    font-size: 20px;
     background-color: #ED9C22;
     float: right;
     border: none;
-    padding: 10px;
     text-decoration: none;
     cursor: pointer;
-    margin-left: 45%;
-    margin-right: 45%;
     margin-top: 10px;
+    height:30px;
+    text-align:center;
 }
 
 input[type=text], input[type=password] {
@@ -59,12 +53,6 @@ input[type=text], input[type=password] {
     background-color: #f8f8f8;
 }
 
-table {
-    text-align: center;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
 
 #submit {
     

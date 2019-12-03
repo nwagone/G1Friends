@@ -10,13 +10,13 @@
 </div
 
 <div id="eventHeading">
-<table id="eventTable">
+<table id="eventTable2">
   <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Start Time</th>
-    <th>End Time</th>
-    <th>Description</th>
+    <th> Title </th>
+    <th> Date </th>
+    <th> Start Time</th>
+    <th> End Time</th>
+    <th> Description</th>
     <th><div class="hideLinks">Details</div></th>
     <th><div class="hideLinks">Edit</div></th>
     <th><div class="hideLinks">Delete</div></th>
@@ -29,8 +29,9 @@
   <br>
     <br>
     
-  
+  <div id= "allEventDisplay">
   <% @event.each do |event| %>
+  
     <tr>
      
       <td><%= event.title %></td>
@@ -47,6 +48,7 @@
     </tr>
     
   <% end %>
+  </div>
   
   <div id= "printLink">
 <%= link_to 'Print my Events Page', 'your_link_here', :onclick => 'window.print();return false;'%>

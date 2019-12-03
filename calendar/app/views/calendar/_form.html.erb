@@ -1,33 +1,44 @@
+<%= javascript_include_tag('application.js') %> 
+
 <%= form_for @event, url: calendar_index_path(@event)  do |f| %>
 
-  <p>
-   
-   <%= f.label :Event_Name %>
-   <br>
-   <%= f.text_field :title, autocomplete: 'off' %>
-  </p>
   
-   <p>
-    <%= f.label :Date %><br>
-    <%= f.text_field :date, "id"=>"datepicker",   autocomplete: 'off' %>
-  </p>
-, 
- <p>
-    <%= f.label :Start_Time %><br>
-    <%= f.text_field :time_start, "class"=>"timepicker", autocomplete: 'off' %>
-  </p>
+   <table id="newEventTable">
+   <tr>
+     <td>Event Name:</td>
+     <td><%= f.text_field :title,"class"=>"formField", autocomplete: 'off' %> </td>
+     </tr>
+     
+     <tr>
+     <td>Color:</td>
+     <td><%= f.color_field :color,"class"=>"formField" %></td>
+  </tr>
   
-  <p>
-    <%= f.label :End_Time %><br>
-    <%= f.text_field :time_end, "class"=>"timepicker", autocomplete: 'off' %>
-  </p>
-
-
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-
-    <div>
-    <%= f.submit %>
-    </div>
+  <tr>
+    <td> Event Date:</td>
+    <td><%= f.text_field :date, "class"=>"formField", "id"=>"datepicker",   autocomplete: 'off' %> </td>
+  </tr>
+ 
+ <tr>
+    <td>Start Time: </td>
+    <td><%= f.text_field :time_start,"class"=>"formField", "class"=>"timepicker", autocomplete: 'off' %> </td>
+    </tr>
+    
+    <tr>
+    <td>End Time: </td>
+    <td><%= f.text_field :time_end,"class"=>"formField", "class"=>"timepicker", autocomplete: 'off' %> </td>
+  </tr>
+ 
+  
+  <tr>
+    <td>Description</td>
+    <td><%= f.text_field :description%></td> 
+  </tr>
+  
+<tr>
+    <td id="subButton"><%= f.submit %></td>
+ </tr>
 
 <% end %>
+
+</table>

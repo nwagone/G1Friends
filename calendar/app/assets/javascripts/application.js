@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.minicolors
 //= require jquery_ujs
 //= require rails-ujs
 //= require jquery-ui/datepicker
@@ -36,5 +37,15 @@
     $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
      $( ".timepicker" ).timepicker();
      $('#calendar').fullCalendar({});
+     $("#eventOnCalendar").style.color="blue";
   } );
 document.addEventListener('turbolinks:load', function () { eventCalendar(); })
+
+
+
+
+	
+	
+	
+	
+

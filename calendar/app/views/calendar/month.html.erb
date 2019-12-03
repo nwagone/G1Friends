@@ -19,7 +19,7 @@
 <br>
 <div >
   <% @event.each  do |events| %>
-    <div class="eventOnCalendar">
+    <div class= "eventOnCalendar", style= "color: <%= events.color %>">
       <% if events.date != date %>
       <% nil %>
       <% else %>
@@ -27,11 +27,16 @@
       <% end %>
     </div>
     </div>
+    
+    
   <% end %>
 <% end %>
 </div>
- <br>
+
  
  <div id= "printLink">
+     </div>
+ <br>
+ <br>
 <%= link_to 'Print my Calendar', 'your_link_here', :onclick => 'window.print();return false;'%>
 </div>

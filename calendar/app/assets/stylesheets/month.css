@@ -3,6 +3,13 @@
     text-align: center;
 }
 
+#printLink{
+    position:absolute;
+    bottom:1px;
+    
+    
+}
+
 #monthMenu{
     
     text-align: center;
@@ -34,8 +41,3 @@
 
 }
 
-#printLink{
-    position:absolute;
-    bottom:1px;
-    
-}

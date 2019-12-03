@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_14_165959) do
+ActiveRecord::Schema.define(version: 2019_12_03_193034) do
 
   create_table "events_calendars", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_11_14_165959) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.text "color"
     t.index ["user_id"], name: "index_events_calendars_on_user_id"
   end
 

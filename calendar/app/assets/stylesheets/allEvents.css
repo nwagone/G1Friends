@@ -8,10 +8,12 @@
  @page {size: A4 portrait;max-height:100%; margin-top:1px; width:100%; margin-bottom: 1px;}
  
 
-    #eventTable {
-      position: absolute;
+    #eventTable2 {
+        
+     
       top: 1px;
       width: 100%;
+      font-size:12px;
      
     }
     
@@ -21,12 +23,18 @@
 
 }
 
-#eventTable th {
+#eventTable2{
+    padding-left:230px;
+    
+}
+
+#eventTable2 th {
     
     font-size: 20px;
     text-decoration: underline;
     text-align:left;
     color:#3F9AB0;
+    padding: 15px;
     
 }
 
@@ -38,9 +46,11 @@
     
 }
 
-#eventTable td{
+#eventTable2 td{
     text-align: left;
-    
+    padding-left: 10px;
+padding-bottom:10px;
+padding-top:10px;
 }
 
 

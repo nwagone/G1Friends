@@ -1,3 +1,4 @@
+
 <h1>This Week</h1>
 <div class="menu">
 <%= render 'menu' %>
@@ -12,17 +13,14 @@
         <br>
               <br>
   <% @event.each do |events| %>
-    <div class= "eventOnCalendar">
+    <div class= "eventOnCalendar", style= "color: <%= events.color %>">
 
       <% if events.date != date %>
       <% nil %>
       <% else %>
-      <%= events.title %>
+      <%= events.title  %> 
       <% end %>
     </div>
   <% end %>
 <% end %>
-
-
-
 
