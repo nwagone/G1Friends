@@ -1,3 +1,5 @@
+
+
 <h1>All Events</h1>
 <div id="monthMenu">
  <tr>
@@ -10,7 +12,9 @@
 </div
 
 <div id="eventHeading">
+
 <table id="eventTable2">
+
   <tr>
     <th> Title </th>
     <th> Date </th>
@@ -34,10 +38,10 @@
   
     <tr>
      
-      <td><%= event.title %></td>
+      <td><div id="titleCol"><%= event.title %></div></td>
       <td><%= event.date.to_s(:short) %></td>
-      <td><%= event.try(:time_start).strftime("%H: %M %p") unless event.time_start.nil?%></td>
-      <td><%= event.try(:time_end).strftime("%H: %M %p") unless event.time_end.nil?%></td>
+      <td><%= event.try(:time_start).strftime("%I: %M %p") unless event.time_start.nil?%></td>
+      <td><%= event.try(:time_end).strftime("%I: %M %p") unless event.time_end.nil?%></td>
       <td><div id="description"><%= event.description %></div></td> 
       <td><div class="hideLinks"><%= link_to 'Details', calendar_path(event) %></div></td>
       <td><div class="hideLinks"><%= link_to 'Edit', edit_calendar_path(event) %></div></td>
@@ -49,8 +53,8 @@
     
   <% end %>
   </div>
+  </table>
   
   <div id= "printLink">
 <%= link_to 'Print my Events Page', 'your_link_here', :onclick => 'window.print();return false;'%>
 </div>
-</table>

@@ -1,22 +1,40 @@
 
-    @media print{
+ @media print{
  
+ @page {size: A4 portrait;
+         max-height:100%; 
+        margin-top:1px; 
+        width:100%;
+        margin-bottom: 1px;
+     margin-left:1px;
+ }
     
     h1 {opacity: 0;}
     #monthMenu {opacity: 0;}
     #printLink {opacity: 0;}
- @page {size: A4 portrait;max-height:100%; margin-top:1px; width:100%; margin-bottom: 1px;}
+ 
  
 
     #eventTable2 {
-        
-     
-      top: 1px;
-      width: 100%;
-      font-size:12px;
-     
-    }
+    position: absolute;
+    top:1px;
+    padding-left:230px;
+    margin-left:1px;
+    margin-right:0%;
+    width:100%;
     
+}
+
+#eventTable2 th {
+    
+    font-size: 25px;
+    text-decoration: underline;
+    text-align:left;
+    color:#3F9AB0;
+    padding: 15px;
+    font-family: calibri;
+    
+}
     .hideLinks {opacity: 0;}
     
     
@@ -25,23 +43,25 @@
 
 #eventTable2{
     padding-left:230px;
+    text-align:center;
     
 }
 
 #eventTable2 th {
     
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: underline;
     text-align:left;
     color:#3F9AB0;
     padding: 15px;
+    font-family: calibri;
     
 }
 
 #eventHeading  {
     
     text-align: left;
-    font-size:15px;
+    font-size:20px;
     padding-top: 10px;
     
 }
@@ -51,6 +71,8 @@
     padding-left: 10px;
 padding-bottom:10px;
 padding-top:10px;
+font-family: calibri;
+font-size:20px;
 }
 
 
@@ -64,4 +86,16 @@ padding-top:10px;
     
     
 }
+
+#titleCol {
+    
+     overflow: hidden;
+     text-overflow: ellipsis;
+  
+    width:150px;
+    height:60px;
+    
+}
+
+
 

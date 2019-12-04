@@ -1,3 +1,5 @@
+<div id="background">
+
 <div id="monthMenu">
 <h1>Events By Month</h1>
  <tr>
@@ -12,7 +14,7 @@
 <br>
 
 
-<div id="background">
+
 <%= month_calendar events_calendar: @event do |date, event| %>
    <%= date.to_formatted_s(:short) %>
 <br>
@@ -21,10 +23,28 @@
   <% @event.each  do |events| %>
     <div class= "eventOnCalendar", style= "color: <%= events.color %>">
       <% if events.date != date %>
-      <% nil %>
+     
+        <% nil %>
       <% else %>
+      
       <%= events.title %>
-      <% end %>
+          <% if events.show_time == false %>
+          <%nil %>
+          <% else %>
+          <br>
+          <%= events.try(:time_start).strftime("%I: %M %p") unless events.time_start.nil?%>
+          <% end %>
+      <%end%>
+      
+      
+      
+      
+     
+      
+      
+     
+      
+      
     </div>
     </div>
     

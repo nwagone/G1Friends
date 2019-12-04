@@ -19,7 +19,14 @@
       <% nil %>
       <% else %>
       <%= events.title  %> 
+      <% if events.show_time == false %>
+          <%nil %>
+          <% else %>
+          <br>
+          <%= events.try(:time_start).strftime("%I: %M %p") unless events.time_start.nil?%>
+          <% end %>
       <% end %>
+      
     </div>
   <% end %>
 <% end %>

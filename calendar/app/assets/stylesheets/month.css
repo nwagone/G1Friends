@@ -22,10 +22,11 @@
     
 }
 
+
 @media print {
  
     
-    h1 {opacity: 0;}
+   
     .arrows {opacity: 0;}
     #monthMenu {opacity: 0;}
     #printLink {opacity: 0;}

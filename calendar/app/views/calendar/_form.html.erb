@@ -27,16 +27,26 @@
     <tr>
     <td>End Time: </td>
     <td><%= f.text_field :time_end,"class"=>"formField", "class"=>"timepicker", autocomplete: 'off' %> </td>
-  </tr>
- 
+  </tr
+  
+  
+
   
   <tr>
     <td>Description</td>
     <td><%= f.text_field :description%></td> 
-  </tr>
-  
-<tr>
+    </tr>
+    
+    <tr>
+        <td>Show Time on Calendar</td>
+        <td> <%= f.check_box :show_time %></td>
+        
+    </tr>
+    
+    <tr>
     <td id="subButton"><%= f.submit %></td>
+    </tr>
+   
  </tr>
 
 <% end %>
