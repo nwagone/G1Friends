@@ -18,9 +18,9 @@
       <% if events.date != date %>
       <% nil %>
       <% else %>
-      <%= events.title  %> 
+      <%=  link_to "#{events.title}", calendar_path(events), style: "color: #{events.color}" %> 
       <% if events.show_time == false %>
-          <%nil %>
+          <% nil %>
           <% else %>
           <br>
           <%= events.try(:time_start).strftime("%I: %M %p") unless events.time_start.nil?%>

@@ -56,5 +56,5 @@ end
 
 private
     def calendar_params
-        params.require(:events_calendar).permit(:title, :date, :time_start, :time_end, :description, :color)
+        params.require(:events_calendar).permit(:title, :date, :time_start, :time_end, :description, :color, :show_time)
     end
